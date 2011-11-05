@@ -26,7 +26,7 @@ def combine(input_files, output_file):
         sprites_image.paste(image, box)
         x += width
 
-    sprites_image.save('test/tmp.output.png')
+    sprites_image.save(output_file)
 
 
 
