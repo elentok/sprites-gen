@@ -47,7 +47,7 @@ def get_output_image_size(input_files):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('output')
-    parser.add_argument('files', nargs='*')
+    parser.add_argument('output', nargs=1, help='the name of the output image file')
+    parser.add_argument('input', nargs='+', help='the input image files')
     args = parser.parse_args()
-    print args
+    combine(args.input, args.output[0])
